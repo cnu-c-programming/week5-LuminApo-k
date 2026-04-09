@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-void modify(int *const arr, int size) {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
 int main() {
-    int nums[] = {10, 20, 30, 40, 50};
-    modify(nums, 5);
+    int a = 10;
+    int b = 20;
+
+    int *const p = &a;
+
+    printf("%d\n", *p);
+
+    *p = b;
+
+    printf("%d\n", *p);
+
     return 0;
 }
